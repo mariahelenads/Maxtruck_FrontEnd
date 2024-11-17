@@ -1,0 +1,19 @@
+header{
+    background: #275299;
+    width: 100%;
+    position: fixed;
+    height: 45px;
+    left: 0;
+    right: 0;
+    top: 0;
+    color: white;
+    text-align: unset;
+    padding: 5px 1em;
+    box-shadow: 1px 2px 2px 2px rgb(59 59 59 / 29%);
+    display: flex;
+    align-items: center;
+    h5{
+        margin-bottom: 0;
+        margin-left: 1em;
+    }
+}

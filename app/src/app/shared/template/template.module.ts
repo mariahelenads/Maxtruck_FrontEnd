@@ -16,12 +16,21 @@ import { ToastModule } from 'primeng/toast';
 
 import { AvatarModule } from 'primeng/avatar';
 import { AvatarGroupModule } from 'primeng/avatargroup';
+import { HeaderComponent } from '../../pages/header/header.component';
+import { PanelMenuModule } from 'primeng/panelmenu';
+import { MenuComponent } from '../../pages/menu/menu.component';
+import { BadgeModule } from 'primeng/badge';
+import { RippleModule } from 'primeng/ripple';
+import { TableModule } from 'primeng/table';
 @NgModule({
-  declarations: [InputFieldComponent],
+  declarations: [InputFieldComponent,HeaderComponent],
   imports: [
     FormsModule,
+    PanelMenuModule,
+    BadgeModule,
     ReactiveFormsModule,
     CommonModule,
+    TableModule,
     CardModule,
     ButtonModule,
     InputGroupModule,
@@ -34,9 +43,12 @@ import { AvatarGroupModule } from 'primeng/avatargroup';
     ToastModule,
     AvatarModule,
     AvatarGroupModule,
+    RippleModule
   ],
   exports: [
     FormsModule,
+    PanelMenuModule,
+    TableModule,
     ReactiveFormsModule,
     CommonModule,
     CardModule,
@@ -50,8 +62,11 @@ import { AvatarGroupModule } from 'primeng/avatargroup';
     InputFieldComponent,
     MessagesModule,
     ToastModule,
+    BadgeModule,
     AvatarModule,
     AvatarGroupModule,
+    HeaderComponent,
+    RippleModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

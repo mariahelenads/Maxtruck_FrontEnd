@@ -1,0 +1,51 @@
+
+<p-card
+  header="Visualizar caminhões"
+  subheader="Card Subheader"
+  class="w-100"
+>
+  <div>
+    <p-table [value]="data" [tableStyle]="{ 'background': 'none' }">
+      <ng-template pTemplate="header">
+          <tr>
+              <th class="text-center">Status</th>
+              <th>Marca</th>
+              <th>Modelo</th>
+              <th>Dimensão</th>
+              <th>Placa</th>
+              <th>Capacidade maxima</th>
+          </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-product>
+          <tr>
+            <td class="text-center">
+              <i class="pi pi-spin pi-stop  {{product.active ? 'text-success' : 'text-danger'}}"></i>
+            </td>
+              <td>
+                <i class="pi pi-truck ml-1"></i>
+                {{ product.brand }}
+              </td>
+              <td>
+                <i class="pi pi-info-circle ml-1"></i>
+                {{ product.model }}
+              </td>
+              <td>
+                <i class="pi pi-hashtag ml-1"></i>
+                {{ product.lenght }} / {{product.width}}
+              </td>
+              <td>
+                <i class="pi pi-barcode ml-1"></i>
+                {{ product.licensePlate }}
+              </td>
+              <td>
+                <i class="pi pi-gauge ml-1"></i>
+                {{ product.loadCapacity }}
+              </td>
+             
+          </tr>
+      </ng-template>
+  </p-table>
+  </div>
+
+  
+</p-card>

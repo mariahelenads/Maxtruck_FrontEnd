@@ -44,7 +44,7 @@ export class LoginComponent implements OnInit {
     this.service
       .authentiction(this.form.getRawValue() as AuthUser)
       .pipe(
-        tap(() => this.route.navigate([RouterEnum.TRUCKS])),
+        tap(() => this.route.navigate([RouterEnum.PAINEL])),
         catchError((error) => {
          console.log(error)
           this.messageService.add({

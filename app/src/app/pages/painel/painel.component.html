@@ -1,0 +1,18 @@
+<app-header></app-header>
+
+<div class="d-flex">
+  
+    <div class="panel-menu">
+      <app-menu (change)="navigate($event)"></app-menu>
+    </div>
+    <div class="panel-main"[ngSwitch]="page">
+      <ng-container *ngSwitchCase="route.TRUCKS">
+        <app-trucks></app-trucks>
+      </ng-container>
+      <ng-container *ngSwitchCase="route.VIEWTRUCKS">
+        <app-view-trucks></app-view-trucks>
+      </ng-container>
+     
+    </div>
+ 
+</div>

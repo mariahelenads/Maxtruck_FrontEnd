@@ -1,4 +1,7 @@
 <div class="w-100 mb-3">
+  <div class="mb-1" *ngIf="label">
+    <label for="integeronly">{{label}}</label>
+  </div>
   <p-inputGroup>
     <p-inputGroupAddon>
       <p-inputIcon styleClass="pi {{icon}}" />

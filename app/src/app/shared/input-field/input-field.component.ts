@@ -9,7 +9,7 @@ import { Message } from 'primeng/api';
 })
 export class InputFieldComponent implements OnInit {
   @Input() label : string = ''
-  @Input() icon : string = ''
+  @Input() icon : string = 'pi-circle'
   @Input() mask : string = ''
   @Input() type : string = 'text'
   @Input() placeholder : string = ''

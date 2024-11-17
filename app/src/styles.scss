@@ -2,3 +2,25 @@
 html,body{
     height: 100%;
 }
+body{
+   
+}
+header{
+    background: #18181b;
+    width: 100%;
+    position: fixed;
+    height: 45px;
+    left: 0;
+    right: 0;
+    top: 0;
+    color: white;
+    text-align: unset;
+    padding: 5px 1em;
+    box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.6588235294);
+    display: flex;
+    align-items: center;
+    h5{
+        margin-bottom: 0;
+        margin-left: 1em;
+    }
+}

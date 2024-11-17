@@ -12,8 +12,12 @@ import { InputMaskModule } from 'primeng/inputmask';
 import { InputFieldComponent } from '../input-field/input-field.component';
 import { MessagesModule } from 'primeng/messages';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ToastModule } from 'primeng/toast';
+
+import { AvatarModule } from 'primeng/avatar';
+import { AvatarGroupModule } from 'primeng/avatargroup';
 @NgModule({
-  declarations :[InputFieldComponent],
+  declarations: [InputFieldComponent],
   imports: [
     FormsModule,
     ReactiveFormsModule,
@@ -27,6 +31,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     InputTextModule,
     InputMaskModule,
     MessagesModule,
+    ToastModule,
+    AvatarModule,
+    AvatarGroupModule,
   ],
   exports: [
     FormsModule,
@@ -40,7 +47,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     InputIconModule,
     InputTextModule,
     InputMaskModule,
-    InputFieldComponent
+    InputFieldComponent,
+    MessagesModule,
+    ToastModule,
+    AvatarModule,
+    AvatarGroupModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

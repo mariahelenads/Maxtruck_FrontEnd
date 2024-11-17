@@ -1,9 +1,10 @@
 export class Truck{
+    id?:string
     model?:string
     brand?:string
     lenght?:number
     width?:number
-    height?:number
+    height?:number // vehicle[height]=400 sets the vehicle's height to 400 cm.
     licensePlate?:string
     loadCapacity?:string
     active?:boolean

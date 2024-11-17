@@ -1,0 +1,9 @@
+p-inputMask {
+  width: 100%;
+  ::ng-deep {
+    input {
+      width: 100%;
+      border-radius: 0;
+    }
+  }
+}

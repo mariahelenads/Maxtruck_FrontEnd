@@ -1,0 +1,34 @@
+<p-card
+  header="Advanced Card"
+  subheader="Card Subheader"
+  [style]="{ width: '360px' }"
+>
+  <ng-template pTemplate="header">
+    <img
+      alt="Card"
+      src="https://primefaces.org/cdn/primeng/images/card-ng.jpg"
+    />
+  </ng-template>
+  <input-field
+   label=""
+   icon="pi-user"
+   [control]="control('user')"
+   messageError="Email invalido"
+  ></input-field>
+
+  <input-field
+  type="password"
+  label=""
+  icon="pi-lock"
+  [control]="control('password')"
+  messageError="Campo obrigatorio"
+ ></input-field>
+  
+  <ng-template pTemplate="footer">
+    <div class="flex gap-3 mt-1">
+      
+      <p-button label="Cadastre-se" [link]="true" class="w-full" styleClass="w-full " />
+      <p-button label="Entrar" class="w-full" styleClass="w-full float-end" />
+    </div>
+  </ng-template>
+</p-card>

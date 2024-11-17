@@ -11,15 +11,15 @@ import { AuthTokenResponse } from '../models/auth-token-response.model';
 })
 export class AuthService {
   
-  readonly url = enviromnet.API
+  readonly url = `${enviromnet.API}/users`
 
   constructor(private http: HttpClient) {}
 
   authentiction(data :AuthUser) : Observable<AuthTokenResponse>{
-    return this.http.post<AuthTokenResponse>(`${this.url}/users/auth`,data).pipe(distinct())
+    return this.http.post<AuthTokenResponse>(`${this.url}/auth`,data).pipe(distinct())
   }
 
   singUp(data : User): Observable<any>{
-    return this.http.post(`${this.url}/users`,data)
+    return this.http.post(`${this.url}`,data)
   }
 }

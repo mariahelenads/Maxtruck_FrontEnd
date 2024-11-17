@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
     this.route.navigate([RouterEnum.SIGUP]);
   }
   login() {
-   
+   // Corrigir loading.
     if (this.form.invalid) return;
     if(this.loading) return
     this.loading = true

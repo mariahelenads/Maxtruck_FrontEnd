@@ -8,12 +8,16 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class TrucksService {
-  readonly url = enviromnet.API
+  readonly url = `${enviromnet.API}/trucks`
 
   constructor(private http: HttpClient) {}
 
 
   getViewTrucks() :Observable<Truck[]> {
-    return this.http.get<Truck[]>(`${this.url}/trucks`)
+    return this.http.get<Truck[]>(`${this.url}`)
+  }
+
+  createTruck(input:Truck) : Observable<any>{
+    return this.http.post(this.url, input);
   }
 }

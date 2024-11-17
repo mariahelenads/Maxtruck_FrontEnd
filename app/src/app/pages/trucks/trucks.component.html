@@ -44,14 +44,14 @@
       <div class="col-lg-6 col-md-6 col-12">
         <input-field
           label="Placa do caminhão"
-          [control]="control('license_plate')"
+          [control]="control('licensePlate')"
           messageError="Campo obrigatorio"
         ></input-field>
       </div>
       <div class="col-lg-6 col-md-6 col-12">
         <input-field
           label=" Capacidade de carga (em toneladas)"
-          [control]="control('load_capacity')"
+          [control]="control('loadCapacity')"
           messageError="Campo obrigatorio"
         ></input-field>
       </div>
@@ -59,14 +59,14 @@
   </div>
 
   <ng-template pTemplate="footer">
-    <div class="flex gap-3 mt-1">
-      <p-button
+    <div class="flex gap-3 mt-1 w-full">
+      <p-button 
         label="Cadastre-se"
         [link]="true"
         class="w-full"
-        styleClass="w-full "
+        
       />
-      <p-button label="Entrar" class="w-full" styleClass="w-full float-end" />
+      <p-button label="Cadastrar" [disabled]="form.invalid" (click)="createTruck()" class="w-full" styleClass="w-full float-end" />
     </div>
   </ng-template>
 </p-card>

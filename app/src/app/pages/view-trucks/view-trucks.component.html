@@ -5,7 +5,7 @@
   class="w-100"
 >
   <div>
-    <p-table [value]="data" [tableStyle]="{ 'background': 'none' }">
+  <p-table [value]="data" [tableStyle]="{ 'background': 'none' }">
       <ng-template pTemplate="header">
           <tr>
               <th class="text-center">Status</th>
@@ -14,6 +14,7 @@
               <th>Dimensão</th>
               <th>Placa</th>
               <th>Capacidade maxima</th>
+              <th>Detalhe</th>
           </tr>
       </ng-template>
       <ng-template pTemplate="body" let-product>
@@ -41,6 +42,15 @@
                 <i class="pi pi-gauge ml-1"></i>
                 {{ product.loadCapacity }}
               </td>
+              <td>
+                <p-button 
+                (click)="viewDetail(product)"
+                icon="pi pi-folder-open"
+                [link]="true"
+                class="w-full"
+                
+              />
+              </td>
              
           </tr>
       </ng-template>
@@ -49,3 +59,5 @@
 
   
 </p-card>
+
+<app-view-detail-truck *ngIf="openModalDetail" (close)="openModalDetail = false"></app-view-detail-truck>

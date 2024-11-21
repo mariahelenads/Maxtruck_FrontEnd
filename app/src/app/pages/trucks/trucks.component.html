@@ -60,13 +60,7 @@
 
   <ng-template pTemplate="footer">
     <div class="flex gap-3 mt-1 w-full">
-      <p-button 
-        label="Cadastre-se"
-        [link]="true"
-        class="w-full"
-        
-      />
-      <p-button label="Cadastrar" [disabled]="form.invalid" (click)="createTruck()" class="w-full" styleClass="w-full float-end" />
+      <p-button label="Cadastrar" [disabled]="form.invalid" (click)="createTruck()"/>
     </div>
   </ng-template>
 </p-card>

@@ -22,8 +22,10 @@ import { MenuComponent } from '../../pages/menu/menu.component';
 import { BadgeModule } from 'primeng/badge';
 import { RippleModule } from 'primeng/ripple';
 import { TableModule } from 'primeng/table';
+import { DialogModule } from 'primeng/dialog';
+import { LabelItemComponent } from '../label-item/label-item.component';
 @NgModule({
-  declarations: [InputFieldComponent,HeaderComponent],
+  declarations: [InputFieldComponent,HeaderComponent,LabelItemComponent],
   imports: [
     FormsModule,
     PanelMenuModule,
@@ -43,7 +45,8 @@ import { TableModule } from 'primeng/table';
     ToastModule,
     AvatarModule,
     AvatarGroupModule,
-    RippleModule
+    RippleModule,
+    DialogModule 
   ],
   exports: [
     FormsModule,
@@ -66,7 +69,9 @@ import { TableModule } from 'primeng/table';
     AvatarModule,
     AvatarGroupModule,
     HeaderComponent,
-    RippleModule
+    LabelItemComponent,
+    RippleModule,
+    DialogModule 
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

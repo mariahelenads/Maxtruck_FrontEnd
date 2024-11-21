@@ -1,0 +1,1 @@
+declare module 'here-js-api';

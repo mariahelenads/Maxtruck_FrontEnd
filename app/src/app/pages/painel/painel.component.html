@@ -1,6 +1,6 @@
 <app-header></app-header>
 
-<div class="d-flex">
+<div class="d-flex h-100">
   
     <div class="panel-menu">
       <app-menu (change)="navigate($event)"></app-menu>
@@ -11,6 +11,9 @@
       </ng-container>
       <ng-container *ngSwitchCase="route.VIEWTRUCKS">
         <app-view-trucks></app-view-trucks>
+      </ng-container>
+      <ng-container *ngSwitchCase="route.CALCULATEROUTE">
+        <app-calculate-route></app-calculate-route>
       </ng-container>
      
     </div>

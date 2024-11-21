@@ -1,0 +1,52 @@
+<p-dialog header="Edit Profile" [modal]="true" (onHide)="close.emit()" [(visible)]="visible" [style]="{ width: 'auto' }">
+  <div class="d-flex justify-content-between flex-wrap">
+      <label-item title="model" [label]="data.model"></label-item>
+      <label-item title="brand" [label]="data.brand"></label-item>
+      <label-item title="lenght" [label]="data.lenght"></label-item>
+      <label-item title="width" [label]="data.width"></label-item>
+      <label-item title="height" [label]="data.height"></label-item>
+      <label-item title="licensePlate" [label]="data.licensePlate"></label-item>
+      <label-item title="loadCapacity" [label]="data.loadCapacity"></label-item>
+      <label-item title="additionalInfo" [label]="data.additionalInfo"></label-item>
+  </div>
+  <p-table [value]="data.criticalBridges" [tableStyle]="{ 'background': 'none' }">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Nome</th>
+            <th>maxHeightCentral</th>
+            <th>maxHeightExpressway</th>
+            <th>maxHeightLocalRoad</th>
+            <th>maxHeightSingleRoad</th>
+            <th>address</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-bridges>
+        <tr>
+          <td >
+           {{bridges.name}}
+          </td>
+            <td>
+              <i class="pi pi-truck ml-1"></i>
+              {{ bridges.maxHeightCentral }}
+            </td>
+            <td>
+              <i class="pi pi-info-circle ml-1"></i>
+              {{ bridges.maxHeightExpressway }}
+            </td>
+            <td>
+              <i class="pi pi-hashtag ml-1"></i>
+              {{ bridges.maxHeightLocalRoad}}
+            </td>
+            <td>
+              <i class="pi pi-barcode ml-1"></i>
+              {{ bridges.maxHeightSingleRoad }}
+            </td>
+            <td>
+              <i class="pi pi-gauge ml-1"></i>
+              {{ bridges.address }}
+            </td>
+           
+        </tr>
+    </ng-template>
+</p-table>
+</p-dialog>

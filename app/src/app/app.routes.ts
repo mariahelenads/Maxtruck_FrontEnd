@@ -5,15 +5,18 @@ import { Truck } from './models/truck.model';
 import { TrucksComponent } from './pages/trucks/trucks.component';
 import { PainelComponent } from './pages/painel/painel.component';
 import { ViewTrucksComponent } from './pages/view-trucks/view-trucks.component';
+import { CalculateRouteComponent } from './pages/calculate-route/calculate-route.component';
 export enum RouterEnum {
+    SIGNIN = '',
     SIGUP = 'singup',
     TRUCKS = 'trucks',
     PAINEL = 'painel',
     VIEWTRUCKS = 'viewtrucks',
+    CALCULATEROUTE = 'calcular-rota',
 }
 export const routes: Routes = [
   {
-    path: '',
+    path: RouterEnum.SIGNIN,
     component: LoginComponent,
   },
   {
@@ -31,5 +34,9 @@ export const routes: Routes = [
   {
     path: RouterEnum.VIEWTRUCKS,
     component: ViewTrucksComponent,
+  },
+  {
+    path: RouterEnum.CALCULATEROUTE,
+    component: CalculateRouteComponent,
   },
 ];

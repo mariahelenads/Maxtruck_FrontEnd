@@ -25,7 +25,7 @@ export class MenuComponent implements OnInit {
       {
           label: 'Caucular rota',
           icon: 'pi pi-calculator',
-          page : RouterEnum.TRUCKS
+          page : RouterEnum.CALCULATEROUTE
       },
       {
           label: 'Visualizar caminhões',

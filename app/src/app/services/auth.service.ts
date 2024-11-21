@@ -15,7 +15,7 @@ export class AuthService {
 
   constructor(private http: HttpClient) {}
 
-  authentiction(data :AuthUser) : Observable<AuthTokenResponse>{
+  authentication(data :AuthUser) : Observable<AuthTokenResponse>{
     return this.http.post<AuthTokenResponse>(`${this.url}/auth`,data).pipe(distinct())
   }
 

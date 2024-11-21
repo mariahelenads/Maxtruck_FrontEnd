@@ -5,8 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "new" : "ng new app"
+    "new": "ng new app"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "here-js-api": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/heremaps": "^3.1.14"
+  }
 }

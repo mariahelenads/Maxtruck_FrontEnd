@@ -6,6 +6,7 @@ import { TrucksComponent } from '../trucks/trucks.component';
 import { ViewTrucksComponent } from '../view-trucks/view-trucks.component';
 import { ViewDetailTruckComponent } from '../view-trucks/view-detail-truck/view-detail-truck.component';
 import { CalculateRouteComponent } from '../calculate-route/calculate-route.component';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-painel',
@@ -15,7 +16,8 @@ import { CalculateRouteComponent } from '../calculate-route/calculate-route.comp
     MenuComponent,
     TrucksComponent,
     ViewTrucksComponent,
-    CalculateRouteComponent
+    CalculateRouteComponent,
+    HeaderComponent
   ],
   standalone: true,
   styleUrls: ['./painel.component.scss'],

@@ -1,0 +1,15 @@
+.form-map{
+        display: flex;
+        padding: 1em 0;
+        background: white;
+        justify-content: space-around;
+        justify-items: center;
+    p-button{
+        margin-left: 1em;
+      ::ng-deep{
+        button{
+            border-radius: 8px;
+        }
+      } 
+    }
+}

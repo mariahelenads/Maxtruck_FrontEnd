@@ -1,8 +1,40 @@
-<div class="form-map">
-    <!-- <input-field
-    label="Modelo do caminhão"
-    [control]="control('model')"
-    messageError="Campo obrigatorio"
-  ></input-field> -->
+<div class="form-map row">
+  <div class="col mb-3">
+    <p-dropdown
+      [options]="trucksList"
+      [(ngModel)]="selectTruck"
+      optionLabel="model"
+      placeholder="Selecionar Caminhão"
+      styleClass="w-100"
+    >
+      <ng-template let-truck pTemplate="item">
+        <div class="flex align-items-center gap-2">
+          <div>
+            <p-inputIcon styleClass="pi pi-truck mr-2" />
+            {{ truck.model }}
+          </div>
+        </div>
+      </ng-template>
+    </p-dropdown>
+  </div>
+  <div class="col-4">
+    <input-field
+      placeholder="Ponto de partida"
+      icon="pi-directions"
+      [control]="control('startRoute')"
+      messageError="Preencha o ponto de partida"
+    ></input-field>
+  </div>
+  <div class="col-4">
+    <input-field
+      placeholder="Ponto de destino"
+      icon="pi-map-marker"
+      [control]="control('endRoute')"
+      messageError="Preencha o ponto de destino"
+    ></input-field>
+  </div>
+  <div class="col">
+    <p-button label="Calcular" class="ml-2" [disabled]="formGroup.invalid" (click)="change()" />
+  </div>
 </div>
-<app-mapper></app-mapper>
+<app-mapper [calcRouter]="emitRoute"></app-mapper>

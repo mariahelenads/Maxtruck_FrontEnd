@@ -16,16 +16,15 @@ import { ToastModule } from 'primeng/toast';
 
 import { AvatarModule } from 'primeng/avatar';
 import { AvatarGroupModule } from 'primeng/avatargroup';
-import { HeaderComponent } from '../../pages/header/header.component';
 import { PanelMenuModule } from 'primeng/panelmenu';
-import { MenuComponent } from '../../pages/menu/menu.component';
 import { BadgeModule } from 'primeng/badge';
 import { RippleModule } from 'primeng/ripple';
 import { TableModule } from 'primeng/table';
 import { DialogModule } from 'primeng/dialog';
 import { LabelItemComponent } from '../label-item/label-item.component';
+import { DropdownModule } from 'primeng/dropdown';
 @NgModule({
-  declarations: [InputFieldComponent,HeaderComponent,LabelItemComponent],
+  declarations: [InputFieldComponent,LabelItemComponent],
   imports: [
     FormsModule,
     PanelMenuModule,
@@ -46,7 +45,8 @@ import { LabelItemComponent } from '../label-item/label-item.component';
     AvatarModule,
     AvatarGroupModule,
     RippleModule,
-    DialogModule 
+    DialogModule,
+    DropdownModule 
   ],
   exports: [
     FormsModule,
@@ -68,10 +68,10 @@ import { LabelItemComponent } from '../label-item/label-item.component';
     BadgeModule,
     AvatarModule,
     AvatarGroupModule,
-    HeaderComponent,
     LabelItemComponent,
     RippleModule,
-    DialogModule 
+    DialogModule,
+    DropdownModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

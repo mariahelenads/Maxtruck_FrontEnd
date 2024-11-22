@@ -6,7 +6,7 @@ import { RouterEnum } from '../../app.routes';
 import { AuthService } from '../../services/auth.service';
 import { AuthUser } from '../../models/auth-user.model';
 import { MessageService } from 'primeng/api';
-import { catchError, delay, distinct, distinctUntilChanged, finalize, tap, zipAll } from 'rxjs';
+import { catchError, finalize, tap, zipAll } from 'rxjs';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +14,7 @@ import { catchError, delay, distinct, distinctUntilChanged, finalize, tap, zipAl
   styleUrls: ['./login.component.scss'],
   standalone: true,
   imports: [TemplateModule],
-  providers: [AuthService, MessageService],
+  providers : [MessageService]
 })
 export class LoginComponent implements OnInit {
   form = new FormGroup({

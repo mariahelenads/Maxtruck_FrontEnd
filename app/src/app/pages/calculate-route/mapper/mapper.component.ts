@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { enviromnet } from '../../../enviroments/enviroment.prod';
 import H from '@here/maps-api-for-javascript';
 import { Subject } from 'rxjs';
+import { ParamMapper } from './mapper.model';
 @Component({
   selector: 'app-mapper',
   templateUrl: './mapper.component.html',
@@ -9,7 +10,7 @@ import { Subject } from 'rxjs';
   styleUrls: ['./mapper.component.scss'],
 })
 export class MapperComponent implements OnInit {
-  @Input() calcRouter = new Subject()
+  @Input() calcRouter = new Subject<ParamMapper>()
   platform!: H.service.Platform;
   defaultLayers!: any;
   map!: H.Map;
@@ -21,7 +22,9 @@ export class MapperComponent implements OnInit {
 
   ngOnInit() {
     this.initMapper();
-    this.calcRouter.subscribe(v=>console.log('passou',v))
+    this.calcRouter.subscribe(data=>{
+      this.calculateRoute(data)
+    })
   }
   
   initMapper() {
@@ -67,16 +70,14 @@ export class MapperComponent implements OnInit {
 }
 
 // Função para calcular a rota
-async calculateRoute() {
+async calculateRoute(data: ParamMapper) {
+  console.log(data)
   try {
-      var originAddress = "";
-      var destinationAddress = "";
-      var height = "";
-      var grossWeight = "";
+    
 
       // Geocodificar endereços
-      const origin = await this.geocodeAddress(originAddress);
-      const destination = await this.geocodeAddress(destinationAddress);
+      const origin = await this.geocodeAddress(data.originAddress);
+      const destination = await this.geocodeAddress(data.destinationAddress);
 
       // Configurar parâmetros da rota
       const routingParameters = {
@@ -85,8 +86,8 @@ async calculateRoute() {
           'return': 'polyline',
           'spans': 'notices',
           'transportMode': 'truck',
-          'vehicle[grossWeight]': String(grossWeight ? parseInt(grossWeight) : 12000),
-          'vehicle[height]': String(height ? parseInt(height) * 100 : 400),
+          'vehicle[grossWeight]': String(data.grossWeight ? Math.round(data.grossWeight) : 12000),
+          'vehicle[height]': String(data.height ? data.height * 100 : 400),
           'departureTime': '2021-11-01T10:00:00',
           'apiKey': 'KzJwxn4fXhBgG3pKHuSjVILKqqQBa6dqldJ683xYKpo'
       };

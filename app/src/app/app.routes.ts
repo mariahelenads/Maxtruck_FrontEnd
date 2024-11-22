@@ -6,6 +6,7 @@ import { TrucksComponent } from './pages/trucks/trucks.component';
 import { PainelComponent } from './pages/painel/painel.component';
 import { ViewTrucksComponent } from './pages/view-trucks/view-trucks.component';
 import { CalculateRouteComponent } from './pages/calculate-route/calculate-route.component';
+import { authGuard } from './app.guard';
 export enum RouterEnum {
     SIGNIN = '',
     SIGUP = 'singup',
@@ -22,6 +23,7 @@ export const routes: Routes = [
   {
     path: RouterEnum.PAINEL,
     component: PainelComponent,
+    canActivate : [authGuard] 
   },
   {
     path: RouterEnum.SIGUP,

@@ -21,19 +21,18 @@ export class MenuComponent implements OnInit {
           label: 'Cadastrar caminhões',
           icon: 'pi pi-truck',
           page : RouterEnum.TRUCKS
+      },     
+      {
+        label: 'Visualizar caminhões',
+        icon: 'pi pi-eye',
+        page : RouterEnum.VIEWTRUCKS
       },
       {
           label: 'Caucular rota',
           icon: 'pi pi-calculator',
           page : RouterEnum.CALCULATEROUTE
       },
-      {
-          label: 'Visualizar caminhões',
-          icon: 'pi pi-eye',
-          page : RouterEnum.VIEWTRUCKS
-      },
   ];
-
   }
   go(page:string){
     this.change.emit(page)

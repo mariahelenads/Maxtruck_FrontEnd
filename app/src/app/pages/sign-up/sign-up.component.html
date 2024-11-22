@@ -1,13 +1,13 @@
 <div class="align-self-center container d-flex h-100 justify-content-center ">
 <p-card class="form-singup"
-  header="Advanced Card"
-  subheader="Card Subheader"
+  header="Cadastro de Usuário"
+  subheader="Preencha os campos abaixo para criar sua conta"
   [style]="{ width: '360px' }"
 >
   <ng-template pTemplate="header">
     <img
       alt="Card"
-      src="https://primefaces.org/cdn/primeng/images/card-ng.jpg"
+      src="https://freepics.ai/files/preview/1280x853/121704305952jppwv1lleqnolwnbnogb60nnvjftlmb0mmfkxqcw8rawp3s4axt0qotcix5olu0mkxowuuou4mpdoth7okapyhrs9buxl1oxxeir.jpeg"
     />
   </ng-template>
 
@@ -34,18 +34,16 @@
 
   <input-field
   type="password"
-  label=""
+  label="Senha"
   icon="pi-lock"
   [control]="control('password')"
   messageError="Campo obrigatorio"
  ></input-field>
   
-  <ng-template pTemplate="footer">
-    <div class="flex gap-3 mt-1">
-      
-      <p-button label="Cadastre-se" [link]="true" class="w-full" styleClass="w-full " />
-      <p-button label="Entrar" class="w-full" styleClass="w-full float-end" />
-    </div>
-  </ng-template>
+ <ng-template pTemplate="footer">
+  <div class="flex gap-3 mt-1 w-full">
+    <p-button label="Cadastrar" [disabled]="form.invalid" (click)="createUser()"/>
+  </div>
+</ng-template>
 </p-card>
 </div>

@@ -29,7 +29,7 @@ export class CalculateRouteComponent implements OnInit {
 
   ngOnInit() {
     this.truckService
-      .getTruckUserDetails()
+      .getUserTrucks()
       .subscribe((trucks) => this.trucksList = trucks);
   }
   getList(){
@@ -42,7 +42,7 @@ export class CalculateRouteComponent implements OnInit {
      originAddress: this.control('startRoute').value,
      destinationAddress:  this.control('endRoute').value,
      height: this.selectTruck.height,
-     grossWeight: this.selectTruck.width,
+     grossWeight: this.selectTruck.weight,
     })
   }
   control(name:string){

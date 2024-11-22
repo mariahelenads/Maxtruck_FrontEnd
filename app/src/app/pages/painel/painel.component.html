@@ -7,7 +7,7 @@
     </div>
     <div class="panel-main"[ngSwitch]="page">
       <ng-container *ngSwitchCase="route.TRUCKS">
-        <app-trucks></app-trucks>
+        <app-trucks (viewTrucks)="navigate($event)"></app-trucks>
       </ng-container>
       <ng-container *ngSwitchCase="route.VIEWTRUCKS">
         <app-view-trucks></app-view-trucks>

@@ -1,7 +1,7 @@
 
 <p-card
-  header="Advanced Card"
-  subheader="Card Subheader"
+  header="Cadatro de Caminhões"
+  subheader=""
   class="w-100"
 >
   <div class="grid">
@@ -29,8 +29,8 @@
       </div>
       <div class="col-lg-6 col-md-6 col-12">
         <input-field
-          label="Largura do caminhão (em metros)"
-          [control]="control('width')"
+          label="Peso Bruto (em kg)"
+          [control]="control('weight')"
           messageError="Campo obrigatorio"
         ></input-field>
       </div>
@@ -52,6 +52,13 @@
         <input-field
           label=" Capacidade de carga (em toneladas)"
           [control]="control('loadCapacity')"
+          messageError="Campo obrigatorio"
+        ></input-field>
+      </div>    
+      <div class="col-lg-6 col-md-6 col-12">
+        <input-field
+          label="Descrição"
+          [control]="control('description')"
           messageError="Campo obrigatorio"
         ></input-field>
       </div>

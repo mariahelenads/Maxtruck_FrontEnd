@@ -19,7 +19,7 @@ export class ViewTrucksComponent implements OnInit {
   constructor(public service : TrucksService) { }
 
   ngOnInit() {
-    this.service.getViewTrucks()
+    this.service.getUserTrucks()
     .pipe(tap(response=> this.data = [...response]))
     .subscribe()
   }

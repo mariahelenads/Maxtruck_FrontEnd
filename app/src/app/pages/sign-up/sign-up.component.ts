@@ -6,7 +6,7 @@ import { AuthService } from '../../services/auth.service';
 import { User } from '../../models/user.model';
 import { Router } from '@angular/router';
 import { RouterEnum } from '../../app.routes';
-import { catchError } from 'rxjs';
+import { catchError, tap } from 'rxjs';
 
 @Component({
   selector: 'app-sign-up',
@@ -42,7 +42,16 @@ export class SignUpComponent implements OnInit {
 
     this.service.singUp(this.form.getRawValue() as User)
     .pipe(
-      tag(() => this.route.navigate([RouterEnum.SIGNIN])),
+      tap(() =>{
+        this.messageService.add({
+          severity: 'success',
+          summary: 'Usuário cadastrado com sucesso',
+          detail: 'O caminhão foi cadastrado corretamente.',
+        });
+        setTimeout(() => {
+          this.route.navigate([RouterEnum.SIGNIN]);
+        }, 1500);
+      }),
     catchError((error) => {
       console.log(error)
           this.messageService.add({
@@ -58,8 +67,4 @@ export class SignUpComponent implements OnInit {
   }
 }
 
-
-function tag(arg0: () => Promise<boolean>): import("rxjs").OperatorFunction<any, unknown> {
-  throw new Error('Function not implemented.');
-}
 

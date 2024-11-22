@@ -30,6 +30,7 @@ export class PainelComponent implements OnInit {
   ngOnInit() {}
 
   navigate(page: any) {
+    console.log('Navegando para:', page);
     this.page = page;
   }
 }

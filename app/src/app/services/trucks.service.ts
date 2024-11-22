@@ -31,13 +31,14 @@ export class TrucksService {
     return this.http.get<TruckDetails>(`${this.url}/${this.truckID}/details`);
   }
 
-  getTruckUserDetails(): Observable<Truck[]> {
+  getUserTrucks(): Observable<Truck[]> {
     return this.http.get<Truck[]>(`${this.url}/user`, {
       params: { userId : this.auth.getUserId()},
     });
   }
 
   createTruck(input: Truck): Observable<any> {
+    input.userId = this.auth.getUserId();
     return this.http.post(this.url, input);
   }
 }

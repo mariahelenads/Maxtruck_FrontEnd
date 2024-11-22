@@ -1,23 +1,22 @@
 <p-dialog header="Edit Profile" [modal]="true" (onHide)="close.emit()" [(visible)]="visible" [style]="{ width: 'auto' }">
   <div class="d-flex justify-content-between flex-wrap">
-      <label-item title="model" [label]="data.model"></label-item>
-      <label-item title="brand" [label]="data.brand"></label-item>
-      <label-item title="lenght" [label]="data.lenght"></label-item>
-      <label-item title="width" [label]="data.width"></label-item>
-      <label-item title="height" [label]="data.height"></label-item>
-      <label-item title="licensePlate" [label]="data.licensePlate"></label-item>
-      <label-item title="loadCapacity" [label]="data.loadCapacity"></label-item>
-      <label-item title="additionalInfo" [label]="data.additionalInfo"></label-item>
+      <label-item title="Modelo" [label]="data.model"></label-item>
+      <label-item title="Marca" [label]="data.brand"></label-item>
+      <label-item title="Comprimento" [label]="data.lenght"></label-item>
+      <label-item title="Altura" [label]="data.height"></label-item>
+      <label-item title="Peso Bruto" [label]="data.weight"></label-item>
+      <label-item title="Placa" [label]="data.licensePlate"></label-item>
+      <label-item title="Capacidade de carga" [label]="data.loadCapacity"></label-item>
+      <label-item title="Descrição" [label]="data.description"></label-item>
   </div>
   <p-table [value]="data.criticalBridges" [tableStyle]="{ 'background': 'none' }">
     <ng-template pTemplate="header">
         <tr>
-            <th>Nome</th>
-            <th>maxHeightCentral</th>
-            <th>maxHeightExpressway</th>
-            <th>maxHeightLocalRoad</th>
-            <th>maxHeightSingleRoad</th>
-            <th>address</th>
+            <th>Ponte Crítica</th>
+            <th>Altura máxima permitida na via central</th>
+            <th>Altura máxima via Expressa (m)</th>
+            <th>Altura máxima permita via Local (m)</th>
+            <th>Altura máxima permita via Única (m)</th>
         </tr>
     </ng-template>
     <ng-template pTemplate="body" let-bridges>

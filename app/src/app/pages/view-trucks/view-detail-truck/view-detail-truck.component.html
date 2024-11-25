@@ -1,4 +1,4 @@
-<p-dialog header="Edit Profile" [modal]="true" (onHide)="close.emit()" [(visible)]="visible" [style]="{ width: 'auto' }">
+<p-dialog header="Caminhões" [modal]="true" (onHide)="close.emit()" [(visible)]="visible" [style]="{ width: 'auto' }">
   <div class="d-flex justify-content-between flex-wrap">
       <label-item title="Modelo" [label]="data.model"></label-item>
       <label-item title="Marca" [label]="data.brand"></label-item>
@@ -12,7 +12,7 @@
   <p-table [value]="data.criticalBridges" [tableStyle]="{ 'background': 'none' }">
     <ng-template pTemplate="header">
         <tr>
-            <th>Ponte Crítica</th>
+            <th>Pontes Críticas</th>
             <th>Altura máxima permitida na via central</th>
             <th>Altura máxima via Expressa (m)</th>
             <th>Altura máxima permita via Local (m)</th>

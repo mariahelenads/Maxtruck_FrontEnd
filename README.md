@@ -1,4 +1,4 @@
-# 🛠️ MAXTRUCK Frontend
+# 🚚 MAXTRUCK Frontend
 
 ## 🖥️ Sobre o Projeto
 O **MAXTRUCK Frontend** é uma aplicação desenvolvida em Angular para proporcionar uma interface amigável e eficiente aos caminhoneiros e empresas de transporte. O objetivo principal é facilitar o planejamento de rotas seguras, evitando pontes e viadutos que não sejam compatíveis com as especificações dos caminhões.

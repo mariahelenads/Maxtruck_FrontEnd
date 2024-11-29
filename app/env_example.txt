@@ -1,4 +1,0 @@
-API_KEY='KzJwxn4fXhBgG3pKHuSjVILKqqQBa6dqldJ683xYKpo'
-APP_ID='oVi6jWpioUO43GLc34x5'
-MAXTRUCK_API_URL='https://localhost:7153/api'
-HERE_API_URL='https://router.hereapi.com/v8'
